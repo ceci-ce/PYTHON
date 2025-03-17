@@ -1,21 +1,29 @@
 #1. Longitud de una cadena
 
-nombre = "Cecilia"
+"""nombre = "Cecilia"
 print("Longitud del nombre: ",len(nombre))
 
 #2. Convertir texto a mayusculas y minusculas
 #upper
 print("Esto soy yo en mayusculas: ",nombre.upper())
 #lower
-print("Esto soy yo en minúsculas: ", nombre.lower())
+print("Esto soy yo en minúsculas: ", nombre.lower())"""
 
 #Ejercicios con estas utilidades combinadas
 
 """1. Generador de nombres de usuario
-Pide al usuario su nombre y apellido.
-Genera un nombre de usuario en minúsculas, sin espacios.
-Añade un número aleatorio al final.
-Muestra el nombre de usuario generado. """
+-Pide al usuario su nombre y apellido.
+-Genera un nombre de usuario en minúsculas, sin espacios.
+-Añade un número aleatorio al final.
+-Muestra el nombre de usuario generado. """
+
+Nombre = "Cecilia"
+Apellido ="de la Cámara"
+Nombre_de_usuario = f"{Nombre}{Apellido}" #Usar un f-string para concatenar sin espacios
+import random
+
+print("Escribe tu nombre y apellido: ", Nombre, Apellido)
+print("Tu nombre de usuario es: ", Nombre_de_usuario.lower().replace(" ",""),random.randint(1,50))
 
 """2. Analizador de frases
 Pide al usuario que ingrese una frase.
