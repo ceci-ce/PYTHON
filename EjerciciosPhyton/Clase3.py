@@ -12,10 +12,10 @@ print("Esto soy yo en minúsculas: ", nombre.lower())"""
 #Ejercicios con estas utilidades combinadas
 
 """1. Generador de nombres de usuario
--Pide al usuario su nombre y apellido.
--Genera un nombre de usuario en minúsculas, sin espacios.
--Añade un número aleatorio al final.
--Muestra el nombre de usuario generado. """
+Pide al usuario su nombre y apellido.
+Genera un nombre de usuario en minúsculas, sin espacios.
+Añade un número aleatorio al final.
+Muestra el nombre de usuario generado. """
 
 Nombre = "Cecilia"
 Apellido ="de la Cámara"
@@ -32,6 +32,15 @@ Indica si la frase contiene la palabra "Python".
 Convierte la frase a mayúsculas.
 Muestra la frase invertida.
 """
+
+Frase = "Está lloviendo demasiado"
+palabras = ["Demasiado", "lloviendo","está"]
+
+print("Escribe una frase sobre lo que estás pensando: ",Frase)
+print("La cantidad de caracteres de la frase es de: ",len(Frase))
+print("¿Contiene la frase la palabra Python?: ", ("Python" in Frase))
+print("La frase en mayúsculas es: " , Frase.upper())
+print("La frase invertida es: ", " ".join(palabras))
 
 """3. Cálculo de descuentos
 Pide al usuario el precio de un producto.
@@ -50,7 +59,7 @@ Genera un código basado en el valor ASCII de la primera letra del producto.
 """5. Conversión de tipos y manipulación de listas
 Pide al usuario una lista de números separados por comas.
 Convierte cada número a entero.
-Elimina los números repetidos.
+Elimina los números repetidos."
 Muestra la lista ordenada sin duplicados.
 """
 
