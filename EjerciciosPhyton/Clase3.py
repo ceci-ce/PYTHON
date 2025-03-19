@@ -49,12 +49,27 @@ Muestra el precio final con dos decimales.
 Muestra el precio redondeado hacia arriba.
 """
 
+precio_mascarilla = 4.5
+descuento = ((15/100)*precio_mascarilla)
+import math
+
+print("Con el descuento del 15%, el precio de la mascarilla se queda en ", (4.5-
+      round(descuento,2)), "€")
+print("El precio redondeado hacia arriba es de ", math.ceil(precio_mascarilla), "€")
+
 """4. Generador de etiquetas de productos
 Pide el nombre de un producto y su precio.
 Convierte el nombre del producto a mayúsculas.
 Muestra el precio con dos decimales.
 Genera un código basado en el valor ASCII de la primera letra del producto.
 """
+
+nombre_producto = "colorete Rhode"
+precio_colorete = 32.50
+
+print(nombre_producto.upper())
+print("El precio con dos decimales es: {:.2f}".format(precio_colorete))
+print("El valor ASCII de la primera letra del producto es ",ord(nombre_producto[:1]))
 
 """5. Conversión de tipos y manipulación de listas
 Pide al usuario una lista de números separados por comas.
