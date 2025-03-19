@@ -8,6 +8,7 @@ print("Longitud del nombre: ",len(nombre))
 print("Esto soy yo en mayusculas: ",nombre.upper())
 #lower
 print("Esto soy yo en minúsculas: ", nombre.lower())"""
+from typing import Any
 
 #Ejercicios con estas utilidades combinadas
 
@@ -77,6 +78,12 @@ Convierte cada número a entero.
 Elimina los números repetidos."
 Muestra la lista ordenada sin duplicados.
 """
+numeros_decimales = [4.3,5.2,9.2,4.3,1.4,5.2,9.0]
+sin_duplicados = set(numeros_decimales)
+# numeros_enteros = ((numeros_decimales) // 1 )) No se me ocurre como convertir los numeros decimales a enteros
+# print(numeros_enteros)
+
+print("Lista sin duplicados:",sin_duplicados)
 
 """6. Creación de mensajes personalizados
 Pide al usuario su nombre, edad y ciudad.
