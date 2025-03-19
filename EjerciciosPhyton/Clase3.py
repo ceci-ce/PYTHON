@@ -17,13 +17,13 @@ Genera un nombre de usuario en minúsculas, sin espacios.
 Añade un número aleatorio al final.
 Muestra el nombre de usuario generado. """
 
-Nombre = "Cecilia"
-Apellido ="de la Cámara"
-Nombre_de_usuario = f"{Nombre}{Apellido}" #Usar un f-string para concatenar sin espacios
+nombre = "Cecilia"
+apellido ="de la Cámara"
+nombre_de_usuario = f"{nombre}{apellido}" #Usar un f-string para concatenar sin espacios
 import random
 
-print("Escribe tu nombre y apellido: ", Nombre, Apellido)
-print("Tu nombre de usuario es: ", Nombre_de_usuario.lower().replace(" ",""),random.randint(1,50))
+print("Escribe tu nombre y apellido: ", nombre, apellido)
+print("Tu nombre de usuario es: ", nombre_de_usuario.lower().replace(" ",""),random.randint(1,50))
 
 """2. Analizador de frases
 Pide al usuario que ingrese una frase.
@@ -33,13 +33,13 @@ Convierte la frase a mayúsculas.
 Muestra la frase invertida.
 """
 
-Frase = "Está lloviendo demasiado"
+frase = "Está lloviendo demasiado"
 palabras = ["Demasiado", "lloviendo","está"]
 
-print("Escribe una frase sobre lo que estás pensando: ",Frase)
-print("La cantidad de caracteres de la frase es de: ",len(Frase))
-print("¿Contiene la frase la palabra Python?: ", ("Python" in Frase))
-print("La frase en mayúsculas es: " , Frase.upper())
+print("Escribe una frase sobre lo que estás pensando: ",frase)
+print("La cantidad de caracteres de la frase es de: ",len(frase))
+print("¿Contiene la frase la palabra Python?: ", ("Python" in frase))
+print("La frase en mayúsculas es: " , frase.upper())
 print("La frase invertida es: ", " ".join(palabras))
 
 """3. Cálculo de descuentos
@@ -48,8 +48,6 @@ Aplica un 15% de descuento.
 Muestra el precio final con dos decimales.
 Muestra el precio redondeado hacia arriba.
 """
-
-precio_yogur = 2
 
 """4. Generador de etiquetas de productos
 Pide el nombre de un producto y su precio.
