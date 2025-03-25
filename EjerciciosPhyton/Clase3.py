@@ -90,11 +90,20 @@ Muestra un mensaje con toda la información.
 Si la edad es menor de 18, redondea hacia arriba hasta la mayoría de edad.
 """
 
+edad = 27
+ciudad = "Madrid"
+
+print(f"Hola, mi nombre es {nombre} tengo {edad} años y vivo en {ciudad}.")
+
 """7. Generador de contraseñas aleatorias
 Pide al usuario su nombre.
 Genera una contraseña segura con la primera letra en mayúscula, un número aleatorio y un símbolo especial.
 Muestra la contraseña generada.
 """
+
+contraseña = f"{nombre[:1].upper()}{random.randint(7,30)}@"
+
+print("La contraseña del usuario es ", contraseña)
 
 """8. Verificación de nombres en listas
 Pide al usuario su nombre.
@@ -102,12 +111,21 @@ Verifica si su nombre está en una lista de invitados predefinida.
 Si está en la lista, muestra su posición.
 """
 
+lista_invitados = ["Alejandro","Margarita",nombre,"Amanda","Marcos"]
+print("¿Está Cecilia invitada a la fiesta?",(nombre in lista_invitados))
+
 """9. Manipulación de nombres
 Pide al usuario su nombre y apellido.
 Convierte el nombre a minúsculas y el apellido a mayúsculas.
 Genera un alias combinando las primeras 3 letras del nombre y del apellido.
 Muestra el alias generado.
+
 """
+"""nombre = input("Escribe tu nombre ")
+apellido = input("Escribe tu apellido ")
+
+alias = nombre[:3].lower(),apellido[:3].upper()
+print(f"El alias del usuario es {alias}")"""
 
 """10. Formatear y mostrar datos matemáticos
 Pide al usuario un número decimal.
@@ -115,3 +133,8 @@ Muestra el número redondeado a dos decimales.
 Calcula y muestra su cuadrado.
 Calcula y muestra su raíz cuadrada.
 """
+"""numero_decimal = float(input("Escribe un numero decimal "))
+
+print("Numero redondeado ",round(numero_decimal,2))
+print(f"Cuadrado: {numero_decimal**2}")
+print("Raiz cuadrada ", (numero_decimal**0.5))"""
