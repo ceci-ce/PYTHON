@@ -7,7 +7,11 @@ edad = input("Qué edad tienes? ")
 edad = int(edad)
 print(edad)
 
-if edad < 18:
-    print("No puedes entrar")
+if edad >= 18 and edad <= 60:
+    print("Puedes entrar")
+elif edad > 60:
+    print("Vete a oldSkoolVeterans")
+elif edad >= 16:
+    print("Vete al instituto")
 else:
-    print("Puedes entrar.")
+    print("Vete a tu casa")
