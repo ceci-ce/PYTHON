@@ -25,6 +25,5 @@ se inicializan dos variables:
 -menor se inicia con el valor más alto posible (+infinito) para que cualquier número ingresado sea más pequeño.
 
 Si el número actual es mayor que el guardado en mayor, lo actualiza.
-Si el número actual es menor que el guardado en menor, lo actualiza también.
-
-""""
+Si el número actual es menor que el guardado en menor, lo actualiza también 
+"""
