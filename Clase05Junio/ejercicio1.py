@@ -9,4 +9,4 @@ def calcular_area_circulo(radio):
     return area
 
 radio = int(input("Introduce el radio: \n "))
-print(f"El area de un circulo de radio {radio} es {calcular_area_circulo(radio)}")
+print(f"El area de un circulo de radio {radio} es {calcular_area_circulo(radio):.2f}")
