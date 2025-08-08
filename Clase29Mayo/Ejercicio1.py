@@ -7,21 +7,20 @@ forma PAIS-CAPITAL. Esto debe ejecutarse indefinidamente hasta que el usuario in
 """
 
 paises = {}
-entrada = input("Indica un valor de la forma Pais:Capìtal o escribe FIN INSERCIONES para finalizar: \n")
+entrada = input("Indica un valor de la forma Pais-Capìtal o escribe FIN INSERCIONES para finalizar: \n").lower()
 
-while entrada != "FIN INSERCIONES":
+while entrada != "FIN INSERCIONES".lower():
     # ["España", "Madrid"]
     pais = entrada.split("-")[0]
     capital = entrada.split("-")[1]
-    paises [pais] = capital
-    entrada = input("Indica un valor de la forma Pais:Capìtal o escribe FIN INSERCIONES para finalizar: \n")
+    paises [pais] = capital # Añade nuevo par clave-valor
+    entrada = input("Indica un valor de la forma Pais-Capìtal o escribe FIN INSERCIONES para finalizar: \n").lower()
 
 #print(paises)
 
-pais_usuario = input("Introduce el nombre del pais que quieres consultar").lower()
+pais_usuario = input("Introduce el nombre del pais que quieres consultar: ").lower()
 if pais_usuario in paises:
     print(f"La capital de {pais_usuario.capitalize()} es {paises[pais_usuario].capitalize()}")
 else:
     print("No existe este registro en el diccionario")
 
-    # REVISAR ESTE CODIGO
