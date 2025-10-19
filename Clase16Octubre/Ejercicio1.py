@@ -2,7 +2,7 @@ import os # os permite comprobar existencia de archivos, rutas...
 
 def count_lines(path): # se define una función que recibirá la ruta a un archivo y devolverá el número de líneas
      if not os.path.exists(path):
-         raise FileExistsError("El archivo no existe") #raise sirve para lanzar (generar) una excepción manualmente
+         raise FileNotFoundError("El archivo no existe") #raise sirve para lanzar (generar) una excepción manualmente
                 #Cuando Python encuentra un raise, interrumpe la ejecución normal y busca un bloque try/except que pueda manejar ese error.
 
      with open(path, 'r') as file: #abre un archivo y crea una variable temporal (file) para trabajar con él
