@@ -1,5 +1,9 @@
 import os # os permite comprobar existencia de archivos, rutas...
 
+# Ejercicio 1 - Leer un archivo y contar líneas¶
+# Escribe un programa que abra un archivo de texto, lea su contenido y cuente el número de líneas que contiene.
+# El programa debe definir una función que realice esta tarea y luego imprima el resultado.
+
 def count_lines(path): # se define una función que recibirá la ruta a un archivo y devolverá el número de líneas
      if not os.path.exists(path):
          raise FileNotFoundError("El archivo no existe") #raise sirve para lanzar (generar) una excepción manualmente

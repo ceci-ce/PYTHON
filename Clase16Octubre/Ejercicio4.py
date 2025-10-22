@@ -1,5 +1,8 @@
 import os.path
 
+# Ejercicio 4 - Copiar el contenido de un archivo a otro¶
+# Escribe un programa que copie el contenido de un archivo de texto a otro archivo. El programa debe definir una función
+# que reciba los nombres de ambos archivos, lea el contenido del primer archivo y lo escriba en el segundo archivo.
 
 def copy_file(file1, file2):
     if not os.path.exists(file1):

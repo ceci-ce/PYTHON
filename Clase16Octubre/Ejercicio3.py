@@ -1,4 +1,10 @@
 # Definimos una función que recibe una lista de nombres y el nombre del archivo donde guardarlos
+
+# Ejercicio 3 - Escribir en un archivo¶
+# Escribe un programa que pida al usuario una lista de nombres y los guarde en un archivo de texto, cada nombre en una
+# línea diferente. El programa debe definir una función que reciba la lista de nombres y el nombre del archivo, y luego
+# escriba los nombres en el archivo.
+
 def escribir_nombres_en_archivo(nombres, archivo): #El tipo de cada parámetro dependerá de lo que se le pase cuando se llame a la función
     # Si la lista de nombres está vacía, lanzamos un error para evitar escribir un archivo vacío
     if len(nombres) == 0:
