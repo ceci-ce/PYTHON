@@ -27,7 +27,7 @@ print(f"Contenido del directorio '{directorio}':\n")
 
 for elemento in os.listdir(directorio): #os.listdir(path) devuelve una lista de nombres (strings) con todo lo que hay dentro del directorio path
     ruta_completa = os.path.join(directorio, elemento) #os.path.join() combina varias partes de una ruta (por ejemplo, una carpeta y un nombre de archivo) en una sola cadena de texto, usando el separador correcto según el sistema operativo.
-    if os.path.isdir(ruta_completa):
+    if os.path.isdir(ruta_completa): # comprueba si la ruta dada es un directorio (una carpeta).
         print(f"[DIR]  {elemento}")  # es una carpeta
     else:
         print(f"[FILE] {elemento}")  # es un archivo
