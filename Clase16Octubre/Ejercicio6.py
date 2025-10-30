@@ -13,9 +13,9 @@ def search_lines(path, word):
         raise FileNotFoundError(f"El archivo {path} no existe")
 
     with open(path, 'r') as file:
-        for num, line in enumerate(file, start=1):
+        for num, line in enumerate(file, start=1): #enumerate agrega un contador (num), que empieza en 1 gracias a start=1/Así puedes saber en qué número de línea estás
             if word in line:
-                print(f"Linea {num}: {line}")
+                print(f"Linea {num}: {line}") #Comprueba si la palabra que buscas (word) está dentro de esa línea/Si la encuentra, entra al if
 
 path = input("Que archivo quieres imprimir?\n")
 word = input("Que palabra quieres buscar?\n")
