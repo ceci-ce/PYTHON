@@ -18,8 +18,8 @@ def search_lines(path, word):
             if word in line:
                 line_splitted = line.split()
                 for i in range(len(line_splitted)):
-                    if word.lower() == line_splitted[i].lower():
-                        print(f"Linea {num}: Posición {i+1}")
+                    if word.lower() == line_splitted[i].lower(): #Compara igualdad exacta palabra a palabra, ignorando mayúsculas/minúsculas con .lower()
+                        print(f"Linea {num}: Posición {i+1}") #Si coincide, imprime la línea y la posición de palabra (primer token = posición 1)
 
 path = input("Que archivo quieres imprimir?\n")
 word = input("Que palabra quieres buscar?\n")
