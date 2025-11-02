@@ -3,3 +3,28 @@
 # mayúsculas o minúsculas. El programa debe definir una función que reciba el nombre del archivo y la palabra a buscar, y
 # luego imprima todas las líneas que contienen esa palabra y en qué posición en la línea, ignorando las diferencias de
 # mayúsculas y minúsculas.
+
+import os
+
+def search_lines(path, word):
+    if len(word) == 0:
+        raise ValueError("La palabra no puede ser vacia")
+
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"El archivo {path} no existe")
+
+    with open(path, 'r') as file:
+        for num, line in enumerate(file, start=1): #enumerate agrega un contador (num), que empieza en 1 gracias a start=1/Así puedes saber en qué número de línea estás
+            if word in line:
+                line_splitted = line.split()
+                for i in range(len(line_splitted)):
+                    if word.lower() == line_splitted[i].lower():
+                        print(f"Linea {num}: Posición {i+1}")
+
+path = input("Que archivo quieres imprimir?\n")
+word = input("Que palabra quieres buscar?\n")
+
+try:
+    search_lines(path, word)
+except Exception as e:
+    print(e)
