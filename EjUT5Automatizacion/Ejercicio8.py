@@ -1,33 +1,32 @@
-# Ejercicio 8 - Generar un log de accesos¶
-# Escribe un programa que simule un sistema de acceso a un recurso protegido. El programa debe pedir al usuario un nombre
-# de usuario y una contraseña, y verificar si son correctos. Si el acceso es exitoso, debe registrar la fecha y hora del
-# acceso en un archivo de log. Si el acceso falla, debe registrar el intento fallido en el mismo archivo de log. El programa
-# debe definir una función que realice esta tarea.
+# Ejercicio 8 - Eliminar archivos vacíos de un directorio¶
+# Escribe un script que reciba como argumento el nombre de un directorio y elimine todos los archivos vacíos que contiene.
 
-from datetime import datetime
+import sys
+import os
 
-usuarios = {
-    "jordi":"c0ntr4s3n4",
-    "asires": "seguridad",
-    "damdawers":"prototipo"
-}
 
-def verify_user(user, passw):
-    with open("log.txt", "a") as file:
-        if user not in usuarios.keys():
-            file.write(f"{datetime.now().isoformat(timespec="seconds")} Se ha intentado loguear un usuario NO EXISTENTE con nombre {user}\n")
-            raise ValueError("Acceso denegado")
-        if passw != usuarios[user]:
-            file.write(f"{datetime.now().isoformat(timespec="seconds")} Se ha intentado loguear el usuario {user} pero HA FALLADO EL PASSWORD\n")
-            raise ValueError("Acceso denegado")
+def rm_empty_files(path):
+    if not os.path.isdir(path):
+        raise NotADirectoryError("La ruta proporcionada no corresponde a un directorio")
 
-        file.write(f"{datetime.now().isoformat(timespec="seconds")} Se ha logueado EXISTOSAMENTE el usuario {user}\n")
+    result = 0
+    dir_items = os.listdir(path)
+    for item in dir_items:
+        new_path = os.path.join(path, item)
+        if os.path.isfile(new_path) and os.path.getsize(new_path) == 0:
+            os.remove(new_path)
+            result += 1
+        elif os.path.isdir(new_path) and len(os.listdir(new_path)) == 0:
+            os.rmdir(new_path)
+            result += 1
 
-while True:
-    user = input("Introduce tu usuario:\n")
-    passw = input("Introduce tu password:\n")
+    return result
 
-    try:
-        verify_user(user, passw)
-    except Exception as e:
-        print(e)
+
+try:
+    if len(sys.argv) != 2:
+        raise IndexError("El programa debe llamarse con un solo argumento")
+
+    print(f"Numero de archivos eliminados: {rm_empty_files(sys.argv[1])}")
+except Exception as e:
+    print(e)
